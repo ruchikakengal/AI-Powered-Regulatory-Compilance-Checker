@@ -37,8 +37,6 @@ This project aims to develop a smart AI-driven compliance engine capable of:
 
 ---
 
-## 📸 Screenshots
-
 ### Compliance Checker Dashboard
 <img width="1158" height="600" alt="image" src="https://github.com/user-attachments/assets/a482ad47-520e-418b-96fd-8487d429ea78" />
 

@@ -265,10 +265,10 @@ def upload_page():
 
             # Try to open existing sheet, else create
             try:
-                ws = gs_client.open_by_key("1GVWQTh0YBI63YVnzEpWo6VFt1cee2WazITY_e5F9VQ8").worksheet(new_name)
+                ws = gs_client.open_by_key("").worksheet(new_name)  #GoogleSheet
                 ws.clear()
             except gspread.exceptions.WorksheetNotFound:
-                ws = gs_client.open_by_key("1GVWQTh0YBI63YVnzEpWo6VFt1cee2WazITY_e5F9VQ8").add_worksheet(title=new_name, rows="1000", cols="20")
+                ws = gs_client.open_by_key("").add_worksheet(title=new_name, rows="1000", cols="20")   #API Key
 
             ws.update("A1", rows)
 

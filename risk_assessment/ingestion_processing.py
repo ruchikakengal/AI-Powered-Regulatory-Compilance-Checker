@@ -14,7 +14,7 @@ from risk_assessment.analyze_clauses import analyze_all_batches
 # Google Sheets setup
 google_auth_file = "services.json"
 google_sheet_scope = ["https://www.googleapis.com/auth/spreadsheets"]
-gsheet_id = os.getenv("GSHEET_ID")
+gsheet_id = "1GVWQTh0YBI63YVnzEpWo6VFt1cee2WazITY_e5F9VQ8"
 sheet_name = "Sheet1"
 
 creds = Credentials.from_service_account_file(google_auth_file, scopes=google_sheet_scope)
@@ -40,14 +40,19 @@ for attempt in range(max_retries):
             raise e  # Give up after max retries
 
 # Clause ingestion and analysis
+
+
 def ingest_to_sheet(clauses, batch_size=6, max_workers=3):
+  
     """
     Analyze clauses in batches and upload results to Google Sheets.
     """
+    
     rows = [
         ["Clause ID", "Contract Clause", "Regulation", "Risk Level", "Risk Score",
          "Clause Identification", "Clause Feedback & Fix", "AI-Modified Clause", "AI-Modified Risk Level"]
     ]
+
 
     # Process clauses in batches
     for i in tqdm(range(0, len(clauses), batch_size), desc="Processing Batches"):

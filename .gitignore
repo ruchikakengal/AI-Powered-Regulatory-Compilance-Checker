@@ -1,0 +1,44 @@
+.env
+venv/
+__pycache__/
+*.pyc
+services.json
+
+
+# Environment files (VERY IMPORTANT)
+.env
+
+# Google credentials (VERY IMPORTANT)
+services.json
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs
+*.log
+
+# Streamlit cache
+.streamlit/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+
+
